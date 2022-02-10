@@ -7,10 +7,9 @@ describe('p0001', () => {
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.Provider.env());
 
-  const program = anchor.workspace.P0001 as Program<P0001>;
-
   it('Is initialized!', async () => {
-    // Add your test here.
+    // Add your test here.    
+    const program = anchor.workspace.P0001 as Program<P0001>;
     const tx = await program.rpc.initialize({});
     console.log("Your transaction signature", tx);
   });
